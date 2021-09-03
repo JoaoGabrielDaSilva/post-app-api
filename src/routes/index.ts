@@ -1,12 +1,5 @@
-import { Router } from "express";
-import { SettingsController } from "../controllers/SettingsController";
+import users from './users'
+import settings from './settings'
+import messages from './messages'
 
-
-const routes = Router()
-
-const settingsController = new SettingsController()
-
-routes.post('/settings', settingsController.create)
-
-
-export  { routes }
+export default [ users, settings, messages ]
