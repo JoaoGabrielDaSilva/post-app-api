@@ -7,6 +7,7 @@ const routes = Router()
 const messagesController = new MessagesController()
 
 routes.post('/messages', messagesController.create)
+routes.get('/messages/:id', messagesController.showByUser)
 
 
 export default routes
